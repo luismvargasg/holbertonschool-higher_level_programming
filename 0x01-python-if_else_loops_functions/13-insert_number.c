@@ -31,6 +31,8 @@ listint_t *insert_node(listint_t **head, int number)
 			else
 				break;
 		}
+		new_node->next = cursor->next;
+		cursor->next = new_node;
 	}
 	return (new_node);
 }
