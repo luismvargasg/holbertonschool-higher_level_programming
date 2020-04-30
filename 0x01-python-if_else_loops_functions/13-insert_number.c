@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * insert_node - func. that inserts a number into a sorted singly linked list.
@@ -28,7 +26,7 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		while (cursor->next != NULL)
 		{
-			if (cursor->next->n < number)
+			if (cursor->next->n <= number)
 				cursor = cursor->next;
 			else
 				break;
