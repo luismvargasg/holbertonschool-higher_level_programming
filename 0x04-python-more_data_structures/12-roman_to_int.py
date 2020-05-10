@@ -9,3 +9,4 @@ def roman_to_int(roman_string):
             if i > 0 and r_dict[roman_string[i]] > r_dict[roman_string[i - 1]]:
                 integer -= 2 * r_dict[roman_string[i - 1]]
         return integer
+    return 0
