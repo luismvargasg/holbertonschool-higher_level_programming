@@ -4,7 +4,7 @@ class Square:
 
     Attribute:
         size: (:obj: `int`, optional): private instance.
-        area: (:obj: `int`, optional): public instance.
+        area: (:obj: `int`): public instance method, returns square area.
 
     Raises:
         TypeError: An exception if parameter size is not an integer.
