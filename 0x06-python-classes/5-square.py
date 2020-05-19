@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""creating a class"""
+
+
 class Square:
     """Defines a square with one property: a writable size.
 
