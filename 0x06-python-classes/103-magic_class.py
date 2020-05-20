@@ -4,7 +4,7 @@ import math
 
 
 class MagicClass:
-    """defining MagicClass"""
+    """defining MagicClass."""
     def __init__(self, radius=0):
         """initializing radius"""
         self.__radius = 0
@@ -12,10 +12,10 @@ class MagicClass:
             raise TypeError('radius must be a number')
         self.__radius = radius
 
-    def area(self, radius):
+    def area(self):
         """defining area"""
         return self.__radius ** 2 * math.pi
 
-    def circumference(self, radius):
+    def circumference(self):
         """defining circumference"""
         return 2 * math.pi * self.__radius
