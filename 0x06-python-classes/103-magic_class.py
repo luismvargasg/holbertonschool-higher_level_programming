@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-import math
 """defining MagicClass Attributes: area and circumference."""
+import math
 
 
 class MagicClass:
     """defining MagicClass"""
-    def __init__(self, radius):
+
+    def __init__(self, radius=0):
         """initializing radius"""
         self.__radius = 0
         if type(radius) is not int or type(radius) is not float:
