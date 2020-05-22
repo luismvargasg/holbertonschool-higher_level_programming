@@ -64,7 +64,9 @@ class Square:
     def __str__(self):
         allstr = ""
         for i in range(self.position[1]):
-            if i <= 1:
+            if i != 1:
+                break
+            else:
                 allstr += "\n"
         for w in range(self.size):
             for i in range(self.position[0]):
