@@ -61,15 +61,15 @@ class Square:
                     print("#", end="")
                 print()
 
-    def __repr__(self):
-        if self.__size == 0:
-            print()
-        else:
-            for i in range(self.__position[1]):
-                print()
-            for w in range(self.size):
-                for i in range(self.__position[0]):
-                    print(end=" ")
-                for h in range(self.__size):
-                    print("#", end="")
-                print()
+    def __str__(self):
+        allstr = ""
+        for i in range(self.position[1]):
+            allstr += "\n"
+        for w in range(self.size):
+            for i in range(self.position[0]):
+                allstr += " "
+            for h in range(self.size):
+                allstr += "#"
+            if w != self.size - 1:
+                allstr += "\n"
+        return allstr
