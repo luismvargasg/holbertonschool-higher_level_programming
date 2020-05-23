@@ -34,8 +34,6 @@ class TestMaxInteger(unittest.TestCase):
         """Test max integer for raising TypeErrors"""
         test_list = [1, 2, 3, "a"]
         self.assertRaises(TypeError, max_integer, test_list)
-        test_list = []
-        self.assertRaises(ValueError, max_integer, test_list)
 
     def test_max_none(self):
         """Test max void parameters"""
