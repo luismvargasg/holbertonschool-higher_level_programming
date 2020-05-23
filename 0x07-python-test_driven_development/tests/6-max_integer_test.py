@@ -11,7 +11,11 @@ class TestMaxInteger(unittest.TestCase):
     """
     def test_max_pos(self):
         """Test max integer in positive numbers"""
+        test_list = [88]
+        self.assertEqual(max_integer(test_list), max(test_list))
         test_list = [1, 2, 3, 4]
+        self.assertEqual(max_integer(test_list), max(test_list))
+        test_list = [1, 2, 10, 3, 4]
         self.assertEqual(max_integer(test_list), max(test_list))
         test_list = [99, 2540, 9999, float("inf")]
         self.assertEqual(max_integer(test_list), max(test_list))
