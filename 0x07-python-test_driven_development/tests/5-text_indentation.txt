@@ -26,9 +26,3 @@ world!
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
-
->>> text_indentation("This are:   <-two white spaces.")
-This are:
-<BLANKLINE>
-  <-two white spaces.
-<BLANKLINE>
