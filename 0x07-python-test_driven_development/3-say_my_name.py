@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """printing a name.
 
 Usage Example:
