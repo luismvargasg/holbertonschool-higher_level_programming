@@ -25,7 +25,8 @@ def matrix_divided(matrix, div):
     if matrix == []:
         raise TypeError("matrix must be a matrix (list of lists) of" +
                         " integers/floats")
-    if type(div) not in [int, float]:
+    if type(div) not in [int, float] or div == float("inf")\
+       or div == float("-inf") or div != div:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
