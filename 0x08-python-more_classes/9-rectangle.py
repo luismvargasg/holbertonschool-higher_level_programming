@@ -19,8 +19,8 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.height = height
         self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     def __str__(self):
@@ -96,5 +96,4 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        if type(size) is int:
-            return cls(size, size)
+        return cls(size, size)
