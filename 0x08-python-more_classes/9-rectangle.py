@@ -96,6 +96,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        width = size
-        height = size
-        return cls(width, height)
+        if type(size) is int:
+            return cls(size, size)
