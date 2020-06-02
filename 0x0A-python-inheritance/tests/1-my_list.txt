@@ -11,12 +11,12 @@ Traceback (most recent call last):
 TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 >>> my_list = MyList()
->>> my_list.append(0)
->>> my_list.append(-8)
+>>> my_list.append(2)
+>>> my_list.append(5)
 >>> my_list.append(18)
 >>> my_list.append(8)
 >>> my_list.print_sorted()
-[-8, 0, 8, 18]
+[2, 5, 8, 18]
 
 >>> my_list = MyList()
 >>> my_list.append(-888)
@@ -49,8 +49,3 @@ TypeError: unorderable types: int() < str()
 >>> my_list.print_sorted()
 [2, 12, 22, 22]
 
->>> my_list = MyList()
->>> my_list.append('Hello')
->>> my_list.append('World')
->>> my_list.print_sorted()
-['Hello', 'World']
