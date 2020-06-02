@@ -48,3 +48,9 @@ TypeError: unorderable types: int() < str()
 >>> my_list.append(12)
 >>> my_list.print_sorted()
 [2, 12, 22, 22]
+
+>>> my_list = MyList()
+>>> my_list.append('Hello')
+>>> my_list.append('World')
+>>> my_list.print_sorted()
+['Hello', 'World']
