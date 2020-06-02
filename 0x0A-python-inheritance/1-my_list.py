@@ -10,4 +10,6 @@ class MyList(list):
 
     def print_sorted(self):
         """Method to print the list, but sorted (ascending sort)"""
-        print(sorted(self))
+        new_list = self[:]
+        new_list.sort()
+        print(new_list)
