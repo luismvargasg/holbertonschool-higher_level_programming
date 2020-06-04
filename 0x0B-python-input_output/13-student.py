@@ -22,3 +22,9 @@ class Student:
             return my_dict
         else:
             return self.__dict__
+
+    def reload_from_json(self, json):
+        """Public method that replaces all attributes of
+        the Student instance.
+        """
+        self.__dict__.update(json)
