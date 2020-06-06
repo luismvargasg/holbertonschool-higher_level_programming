@@ -17,4 +17,5 @@ def append_after(filename="", search_string="", new_string=""):
             update_file += line
             if search_string in line:
                 update_file += new_string
+        myFile.seek(0)
         myFile.write(update_file)
