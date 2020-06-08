@@ -126,3 +126,11 @@ class Rectangle(Base):
                 att_value.append(arg)
                 for i in range(len(att_value)):
                     setattr(self, att_name[i], att_value[i])
+
+    def to_dictionary(self):
+        """public method that returns the dictionary representation
+        of a Rectangle.
+        """
+        myDict = {"id": self.id, "width": self.width, "height": self.height,
+                  "x": self.x, "y": self.y}
+        return myDict
