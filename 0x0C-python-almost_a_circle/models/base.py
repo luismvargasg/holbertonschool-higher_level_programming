@@ -68,6 +68,7 @@ class Base:
     def load_from_file(cls):
         """class method that returns a list of instances"""
         filename = cls.__name__ + ".json"
+        objs = []
         try:
             with open(filename, mode="r", encoding="utf-8") as myFile:
                 objs = cls.from_json_string(myFile.read())
