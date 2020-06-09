@@ -12,6 +12,10 @@ class TestBase(unittest.TestCase):
         """method called to initialize an obj of Base class with id 1"""
         self.obj = Base()
 
+    def tearDown(self):
+        """cleaning the attribute nb_objects counter to 0"""
+        Base._Base__nb_objects = 0
+
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""
         pep8style = pep8.StyleGuide(quiet=True)
@@ -51,10 +55,11 @@ class TestBase(unittest.TestCase):
 
     def test_base_id_both(self):
         """testing the id constructor with auto and manual id assignation"""
+        self.assertEqual(self.obj.id, 1)
         b6 = Base()
-        self.assertEqual(b6.id, 5)
+        self.assertEqual(b6.id, 2)
         b7 = Base()
-        self.assertEqual(b7.id, 6)
+        self.assertEqual(b7.id, 3)
         b8 = Base(99)
         self.assertEqual(b8.id, 99)
         b9 = Base(-99)
