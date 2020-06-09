@@ -25,10 +25,12 @@ class TestBase(unittest.TestCase):
                               "instance of Base class.")
 
     def test_hasattr_nb_objects(self):
+        """testing if the created object has the __nb_objects attribute"""
         self.assertTrue(hasattr(self.obj, "_Base__nb_objects"), "created " +
                         "obj doesn't have the attribute __nb_objects.")
 
     def test_hasattr_id(self):
+        """testing if the created object has the id attribute"""
         self.assertTrue(hasattr(self.obj, "id"), "created obj doesn't " +
                         "have the attribute id.")
 
@@ -59,4 +61,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b9.id, -99)
 
     def test_raise_TypeError(self):
+        """testing if the TypeError: "__init__() takes from 1 to 2 positional
+        arguments but 3 were given" is raised"""
         self.assertRaises(TypeError, Base, 1, 2)
