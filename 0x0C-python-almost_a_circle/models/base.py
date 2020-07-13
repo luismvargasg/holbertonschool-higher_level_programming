@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defining the Base class"""
 import json
+import turtle
 
 
 class Base:
@@ -77,3 +78,94 @@ class Base:
         except:
             pass
         return objs
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """static method that opens a window and draws all
+        the Rectangles and Squares."""
+        turtle.title("OOP in Python - drawing in GUI")
+        turtle.setup(width=1000, height=600)
+        turtle.bgcolor("#29293d")
+        turtle.pen(pencolor="#8080ff", pensize="4")
+        turtle.penup()
+        turtle.goto(x=0, y=300)
+        turtle.pendown()
+        turtle.right(90)
+        turtle.forward(600)
+
+        titles = turtle.Turtle()
+        titles.hideturtle()
+        titles.penup()
+        titles.goto(x=-330, y=260)
+        titles.color("#ffff66")
+        titles.write("Rectangles", font=("Arial", 28, 'bold'))
+        titles.goto(x=195, y=260)
+        titles.color("#ffff66")
+        titles.write("Squares", font=("Ar#212145ial", 28, 'bold'))
+
+        coord_x = -270
+        coord_y = 100
+        aux_turtle = turtle.Turtle()
+        for obj in list_rectangles:
+            w = obj.width
+            h = obj.height
+            x = obj.x
+            y = obj.y
+
+            titles.goto(coord_x - 180, coord_y + 50)
+            titles.color("white")
+            titles.write(obj, font=("Arial", 11, 'bold'))
+            turtle.penup()
+            aux_turtle.penup()
+            turtle.goto(coord_x, coord_y)
+            aux_turtle.goto(coord_x, coord_y)
+            turtle.pen(pencolor="#ff6666", pensize="2.5", fillcolor="#212145")
+            aux_turtle.pen(pencolor="gray", pensize="1.5")
+            aux_turtle.pendown()
+            aux_turtle.forward(140)
+            aux_turtle.left(180)
+            aux_turtle.forward(140)
+            aux_turtle.right(90)
+            aux_turtle.forward(140)
+            turtle.goto(coord_x + x, coord_y + y)
+            turtle.pendown()
+            for i in range(2):
+                turtle.left(90)
+                turtle.forward(w)
+                turtle.left(90)
+                turtle.forward(h)
+            coord_y -= 190
+            aux_turtle.right(90)
+
+        coord_x = 230
+        coord_y = 100
+        for obj in list_squares:
+            w = obj.width
+            h = obj.height
+            x = obj.x
+            y = obj.y
+
+            titles.goto(coord_x - 160, coord_y + 50)
+            titles.color("white")
+            titles.write(obj, font=("Arial", 11, 'bold'))
+            turtle.penup()
+            aux_turtle.penup()
+            turtle.goto(coord_x, coord_y)
+            aux_turtle.goto(coord_x, coord_y)
+            turtle.pen(pencolor="#ff6666", pensize="2.5", fillcolor="#212145")
+            aux_turtle.pen(pencolor="gray", pensize="1.5")
+            aux_turtle.pendown()
+            aux_turtle.forward(140)
+            aux_turtle.left(180)
+            aux_turtle.forward(140)
+            aux_turtle.right(90)
+            aux_turtle.forward(140)
+            turtle.goto(coord_x + x, coord_y + y)
+            turtle.pendown()
+            for i in range(4):
+                turtle.left(90)
+                turtle.forward(w)
+            coord_y -= 190
+            aux_turtle.right(90)
+
+        turtle.done()
