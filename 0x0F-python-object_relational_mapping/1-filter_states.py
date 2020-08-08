@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Script that lists all states from the database hbtn_0e_0_usa"""
+""" Script that lists all states with a name starting with N (upper N) from
+the database hbtn_0e_0_usa.
+"""
 import MySQLdb
 import sys
 
@@ -13,7 +15,8 @@ if __name__ == "__main__":
         db=sys.argv[3])
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    query = "SELECT * FROM states WHERE UPPER(name) LIKE 'N%' ORDER BY id ASC"
+    cur.execute(query)
     res = cur.fetchall()
     for row in res:
         print(row)
