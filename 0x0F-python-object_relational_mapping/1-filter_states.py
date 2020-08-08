@@ -13,8 +13,7 @@ if __name__ == "__main__":
         db=sys.argv[3])
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
-    print(cur)
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
     res = cur.fetchall()
     for row in res:
         print(row)
