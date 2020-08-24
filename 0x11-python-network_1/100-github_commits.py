@@ -10,6 +10,10 @@ if __name__ == "__main__":
             sys.argv[2], sys.argv[1])
     r = requests.get(url)
     res = r.json()
-    for i in range(10):
-        print("{}: {}".format(res[i].get('sha'), res[i].get('commit').get
+    i = 0
+    for item in res:
+        print("{}: {}".format(item.get('sha'), item.get('commit').get
               ('author').get('name')))
+        i += 1
+        if i == 10:
+            break
