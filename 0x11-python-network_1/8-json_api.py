@@ -3,7 +3,6 @@
 value of the X-Request-Id variable found in the header of the response."""
 import requests
 import sys
-import json
 
 
 if __name__ == "__main__":
