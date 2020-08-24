@@ -14,7 +14,7 @@ if __name__ == "__main__":
     r = requests.post(url, letter)
     try:
         res = r.json()
-        if len(res) >= 0:
+        if len(res) > 0:
             print("[{}] {}".format(res['id'], res['name']))
         else:
             print("No result")
