@@ -11,5 +11,5 @@ if __name__ == "__main__":
     r = requests.get(url)
     res = r.json()
     for i in range(10):
-        print("{}: {}".format(res[i]['sha'], res[i]['commit']['author']
-              ['name']))
+        print("{}: {}".format(res[i].get('sha'), res[i].get('commit').get
+              ('author').get('name')))
