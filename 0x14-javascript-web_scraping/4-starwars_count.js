@@ -8,8 +8,10 @@ request(url, function (err, response, body) {
   } else {
     let res = 0;
     for (const movie of JSON.parse(body).results) {
-      if (movie.characters.includes(str)); {
-        res++;
+      for (const character of movie.characters) {
+        if (character.includes(str)) {
+          res++;
+        }
       }
     }
     console.log(res);
